@@ -35,26 +35,26 @@ bool prost(int num)
     else
     {
         for (int i = 2; i < num; i++)
-    {
-        if (num % i == 0) return false;
+        {
+            if (num % i == 0) return false;
+        }
+        return true;
     }
-    return true;
-    }
-    
+
 }
 
 int Count(int[] mas)
 {
     int count = 0;
-foreach (var item in mas)
-{
-    if (prost(item))
+    foreach (var item in mas)
     {
-        Console.Write($"{item} ");
-        count++;
+        if (prost(item))
+        {
+            Console.Write($"{item} ");
+            count++;
+        }
     }
-}
-Console.WriteLine();
+    Console.WriteLine();
     return count;
 }
 
